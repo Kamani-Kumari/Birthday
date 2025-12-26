@@ -23,6 +23,7 @@ export default function MusicPlayer() {
   }, []);
 
   const togglePlay = async () => {
+      console.log("Nhi ho raha hai")
     if (!audioRef.current) return;
 
     try {
@@ -75,8 +76,7 @@ export default function MusicPlayer() {
         </button>
 
         {/* PULSE EFFECT */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-ping opacity-20" />
-
+<div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-ping opacity-20 pointer-events-none" />
         {/* MUSIC ICON */}
         <div className="absolute -top-1 -right-1">
           <Music className="text-yellow-400 animate-pulse" size={20} />
